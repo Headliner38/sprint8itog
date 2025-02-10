@@ -51,10 +51,10 @@ func TestAddGetDelete(t *testing.T) {
 	pkg, err := store.Get(pkgId)
 	require.NoError(t, err, "error")
 
-	assert.Equal(t, parcel.Address, pkg.Address, "values not equal")
-	assert.Equal(t, parcel.CreatedAt, pkg.CreatedAt, "values not equal")
-	assert.Equal(t, parcel.Status, pkg.Status, "values not equal")
-	assert.Equal(t, parcel.Client, pkg.Client, "values not equal")
+	assert.Equal(t, parcel, pkg, "values not equal")
+	//assert.Equal(t, parcel.CreatedAt, pkg.CreatedAt, "values not equal")
+	//assert.Equal(t, parcel.Status, pkg.Status, "values not equal")
+	//assert.Equal(t, parcel.Client, pkg.Client, "values not equal")
 
 	// delete
 	// удалите добавленную посылку, убедитесь в отсутствии ошибки
